@@ -1,3 +1,24 @@
+.vh {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.vh.focusable:active,
+.vh.focusable:focus {
+    position: static;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+}
+
 @mixin loading-spinner($activeColor: "#ef6565", $selector: "&::before", $time: 1.5s) {
     // Animation keyframes
     @keyframes spinner {
