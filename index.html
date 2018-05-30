@@ -11,5 +11,16 @@
     <div class="spinner js-loading-spinner" role="alert" aria-live="assertive">
         <p class="vh js-loading-spinner-copy">Content is loading</p>
     </div>
+    <button class="complete-spinner-btn js-complete-spinner" aria-controls="spinner">Complete Spinner</button>
+    <script>
+        const spinner = document.getElementsByClassName('js-loading-spinner')[0];
+        const copy = document.getElementsByClassName('js-loading-spinner-copy')[0];
+        const completeSpinnerBtn = document.getElementsByClassName("js-complete-spinner")[0];
+        completeSpinnerBtn.addEventListener('click', () => {
+            spinner.classList.add('-loaded');
+            copy.innerHTML = 'Content has loaded';
+            completeSpinnerBtn.style.display = 'none';
+        });
+    </script>
 </body>
 </html>

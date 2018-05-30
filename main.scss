@@ -64,5 +64,11 @@
 .spinner {
     @include loading-spinner;
     // The height here is just for demo purposes
-    height: 100vh;
+    height: 80vh;
+}
+
+.complete-spinner-btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
